@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+
+const sauceSchema = mongoose.Schema ({
+    userId: {type: String, require: true},
+    name: {type: String, require: true},
+    manufacturer: {type: String, require: true},
+    mainPepper: {type: String, require: true},
+    imageUrl: {type: String, require: true},
+    heat: {type: Number, require: true},
+    likes: {type: Number, require: true},
+    dislikes: {type: Number, require: true},
+    usersLiked: {type: [String], require: true},
+    usersDisliked: {type: [String], require: true},
+});
+
+module.exports = mongoose.model('Sauce', sauceSchema); //on exporte le model dans la BDD pour pouvoir l'utiliser avec une méthode du package mongoose.
