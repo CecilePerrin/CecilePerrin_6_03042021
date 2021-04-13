@@ -6,9 +6,10 @@ const path = require('path');
 const sauceRoutes = require ('./routes/Sauce')
 const userRoutes = require('./routes/User')
 const app = express();
+require ('dotenv/config');
 
 
-mongoose.connect('mongodb+srv://cecile:12.abRc46@cluster0.uq6ns.mongodb.net/projet6?retryWrites=true&w=majority',
+mongoose.connect(process.env.DB_CONNECTION,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
