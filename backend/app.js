@@ -2,11 +2,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require ('mongoose');
+const helmet = require('helmet')
 const path = require('path');
 const sauceRoutes = require ('./routes/Sauce')
 const userRoutes = require('./routes/User')
 const app = express();
-require ('dotenv/config');
+require('dotenv').config();
 
 
 mongoose.connect(process.env.DB_CONNECTION,
@@ -22,7 +23,10 @@ app.use((req, res, next) => { // middleware appliqué à toutes les requêtes en
     next();
   });
 
-app.use(bodyParser.json());
+
+app.use(express.json());
+
+app.use(helmet());
 
 app.use('/image', express.static(path.join(__dirname, 'image')));
 
