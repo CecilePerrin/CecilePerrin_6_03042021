@@ -20,18 +20,23 @@ Modules nécessaires : Mongoose , Bcrypt, Body-Parser, Express, Helmet, Multer, 
 
 ## Sécurité 
 
-* OWASP et RGPD
+=> OWASP et RGPD
 
-Authentification avec les token grâce à __jsonwebtoken__
-Protection des headers et des xxs avec __Helmet__
-Cryptage des emails avec __crypto-js__
-Hashage du mot de passe avec __bcrypt__
-Vérification que l'email soit unique dans la BDD grâce à __mongoose-unique-validator__
-__Password validator__ qui force l'ultilisateur à avoir un certains nombre de caractère
-Protection des données sensibles grâce à __dotenv__
+* Authentification avec les token grâce à __jsonwebtoken__
+
+* Protection des headers et des xxs avec __Helmet__
+
+* Cryptage des emails avec __crypto-js__
+
+* Hashage du mot de passe avec __bcrypt__
+
+* Vérification que l'email soit unique dans la BDD grâce à __mongoose-unique-validator__
+
+* __Password validator__ qui force l'ultilisateur à avoir un certains nombre de caractère
+
+* Protection des données sensibles grâce à __dotenv__
 
 ## Lancer l'application
-
 
 * Frontend :
 => Démarrer `ng serve` pour avoir accès au serveur de développement. Rendez-vous sur `http://localhost:4200/`. L'application va se recharger automatiquement si vous modifiez un fichier source.
