@@ -50,5 +50,7 @@ NB:
 *Ajoutez un fichier dans votre racine du backend nommé ".env". A l'intérieur, 3 variables d'environnement secrètes y sont définies:
 
 **DB_CONNECTION = 'lien_vers_la_BDD_mongoDB'
+
 **TOKEN_KEY = 'clé_secrète_pour_les_tokens'
+
 **EMAIL_KEY = 'clé_secrète_emails'
